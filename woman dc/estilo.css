@@ -21,15 +21,48 @@
   font-weight: 200;
 }
 
+@keyframes login-visibility {
+  0% {
+    position: fixed;
+    top: 30%;
+    left: -120%;
+  }
+  100%{
+    position: fixed;
+    top:30%;
+    left:11%
+  }
+}
+
+
 form {
+  animation: login-visibility 7s;
   position: fixed;
   top: 30%;
   left: 11%;
 }
 
+@keyframes background-anim{
+  0% {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 300% 50%;
+  }
+  50%{
+    background-color: black;
+  }
+  100%{
+    background-image: linear-gradient(to right, black, 90%, transparent),
+    url("img/04.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 120% 50%;
+  }
+}
 body {
-  background-image: linear-gradient(to right, black, 90%, transparent), /*(black) trocada #F2B28D*/
-    url("./assets/imagem dc/04.png");
+  background-image: linear-gradient(to right, black, 70%, transparent), 
+    url("img/04.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 100% 50%;
@@ -38,6 +71,30 @@ body {
 .login {
   margin-left: 12.5%;
 }
+
+@keyframes marvel{ /* São animação do logo MARVEL */
+  0%{
+    position: fixed;
+    top: 35%;
+    left: 39%;
+  }
+  25%{
+    position: fixed;
+    top: 35%;
+    left: 39%;
+  }
+  50%{
+    position: fixed;
+    top: 35%;
+    left: 14%;
+  }
+  100%{
+    position: fixed; /* Colocar o 100% do objeto idêntico ao do h1 , é aonde vai parar */
+    top: 2%;
+    left: 14%;
+  }
+}
+
 
 h1 { /* título maior*/
   position: fixed;
@@ -49,10 +106,10 @@ h1 { /* título maior*/
   font-weight: 300;
   text-align: center;
   vertical-align: middle;
-
   background-color: #72CEF2; /* (red) cor trocada*/
   width: 16rem;
   height: 6rem;
+  animation: marvel 4s;
 }
 
 h2 {
